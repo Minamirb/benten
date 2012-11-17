@@ -1,8 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails',     :git => 'git://github.com/rails/rails.git', :branch => '3-2-stable'
-gem 'journey',   :git => 'git://github.com/rails/journey.git'
-gem 'arel',      :git => 'git://github.com/rails/arel.git', :branch => '3-0-stable'
+# gem 'rails',     :git => 'git://github.com/rails/rails.git', :branch => '3-2-stable'
+# gem 'journey',   :git => 'git://github.com/rails/journey.git'
+# gem 'arel',      :git => 'git://github.com/rails/arel.git', :branch => '3-0-stable'
+gem 'rails',     github: 'rails/rails'
+gem 'journey',   github: 'rails/journey'
+gem 'arel',      github: 'rails/arel'
+gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
 
 gem 'sqlite3'
 
@@ -10,8 +14,10 @@ gem 'sqlite3'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   :git => 'git://github.com/rails/sass-rails.git', :branch => '3-2-stable'
-  gem 'coffee-rails', :git => 'git://github.com/rails/coffee-rails.git', :branch => '3-2-stable'
+  # gem 'sass-rails',   :git => 'git://github.com/rails/sass-rails.git', :branch => '3-2-stable'
+  # gem 'coffee-rails', :git => 'git://github.com/rails/coffee-rails.git', :branch => '3-2-stable'
+  gem 'sass-rails',   github: 'rails/sass-rails'
+  gem 'coffee-rails', github: 'rails/coffee-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

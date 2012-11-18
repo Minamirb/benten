@@ -1,10 +1,21 @@
 class CommentsController < ApplicationController
-  def index
-    @comments = Comment.all
+  include ActionController::Live
 
-    respond_to do |format|
-      format.html
-      format.json { render json: @comments }
+  def index
+    response.headers['Content-Type']  = 'text/event-stream'
+    response.headers['Cache-Control'] = 'no-cache'
+    stream = response.stream
+    fsevent = FSEvent.new
+
+    begin
+      fsevent.watch(Rails.root.join('tmp', 'comment.txt').to_s, :modify, :moved_to, :create) do |e|
+        stream.write "data: #{Time.now.strftime("%F %T")}\n\n"
+      end
+      fsevent.run
+    rescue IOError
+
+    ensure
+      stream.close
     end
   end
 

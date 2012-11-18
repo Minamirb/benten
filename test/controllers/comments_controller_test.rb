@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class CommentsControllerTest < ActionController::TestCase
+  class CommentsController
+    attr_accessor :latch
+  end
+
   setup do
     @comment = comments(:one)
   end

@@ -76,6 +76,11 @@ GIT
       sprockets-rails (~> 2.0.0.rc0)
       tilt (~> 1.3)
 
+GIT
+  remote: git://github.com/sstephenson/sprockets-rails.git
+  revision: 8ddad4ce1a93db79187dfbcd06f3d5165568d8d1
+  specs:
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -123,6 +128,7 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
+    turbolinks (0.5.1)
     tzinfo (0.3.35)
     uglifier (1.3.0)
       execjs (>= 0.3.0)
@@ -139,5 +145,7 @@ DEPENDENCIES
   jquery-rails
   rails!
   sass-rails!
+  sprockets-rails!
   sqlite3
+  turbolinks
   uglifier (>= 1.0.3)

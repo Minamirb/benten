@@ -6,7 +6,7 @@
         <%= form_for(@comment) do |f| %>
           <%= f.text_field :body %>
         
-          <%= f.submit %>
+          <%= f.submit id: 'send_comment' %>
         <% end %>
 	<input type="text" placeholder="Type message…">
       </p>

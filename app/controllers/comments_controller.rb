@@ -1,44 +1,35 @@
 class CommentsController < ApplicationController
-  # GET /comments
-  # GET /comments.json
   def index
     @comments = Comment.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.json { render json: @comments }
     end
   end
 
-  # GET /comments/1
-  # GET /comments/1.json
   def show
     @comment = Comment.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html
       format.json { render json: @comment }
     end
   end
 
-  # GET /comments/new
-  # GET /comments/new.json
   def new
     @comment = Comment.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html
       format.json { render json: @comment }
     end
   end
 
-  # GET /comments/1/edit
   def edit
     @comment = Comment.find(params[:id])
   end
 
-  # POST /comments
-  # POST /comments.json
   def create
     @comment = Comment.new(comment_params)
 
@@ -53,8 +44,6 @@ class CommentsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /comments/1
-  # PATCH/PUT /comments/1.json
   def update
     @comment = Comment.find(params[:id])
 
@@ -69,8 +58,6 @@ class CommentsController < ApplicationController
     end
   end
 
-  # DELETE /comments/1
-  # DELETE /comments/1.json
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
@@ -82,9 +69,6 @@ class CommentsController < ApplicationController
   end
 
   private
-
-    # Use this method to whitelist the permissible parameters. Example: params.require(:person).permit(:name, :age)
-    # Also, you can specialize this method with per-user checking of permissible attributes.
     def comment_params
       params.require(:comment).permit(:body)
     end

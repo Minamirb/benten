@@ -1,16 +1,18 @@
 source 'https://rubygems.org'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.beta'
+gem 'rails',     github: 'rails/rails'
+gem 'journey',   github: 'rails/journey'
+gem 'arel',      github: 'rails/arel'
+gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
 
 gem 'sqlite3'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sprockets-rails', '~> 2.0.0.rc1'
-  gem 'sass-rails',   '~> 4.0.0.beta'
-  gem 'coffee-rails', '~> 4.0.0.beta'
+  gem 'sprockets-rails', github: 'sstephenson/sprockets-rails'
+  gem 'sass-rails',   github: 'rails/sass-rails'
+  gem 'coffee-rails', github: 'rails/coffee-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', platforms: :ruby

@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class CommentTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  describe "Comment" do
+    it "should need body" do
+      comment = Comment.create()
+      comment.errors[:body].include?("can't be blank").must_equal true
+    end
+  end
 end

@@ -1,4 +1,6 @@
 Benten::Application.routes.draw do
+  get "webrtc/echo"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -15,12 +15,14 @@ group :assets do
   gem 'coffee-rails', github: 'rails/coffee-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', platforms: :ruby
+  gem 'therubyracer', platforms: :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
+gem "less-rails",              github: 'metaskills/less-rails'
+gem "twitter-bootstrap-rails", github: 'seyhunak/twitter-bootstrap-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

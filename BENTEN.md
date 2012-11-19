@@ -1,7 +1,8 @@
 
 # How to create Rails 4 application
 ## Generate Rails 4 application
-  Bundler version >= 1.2.2 required.
+Bundler version >= 1.2.2 required.
+
     rvm use ruby-1.9.3-p286
     rvm gemset create benten
     rvm gemset use benten
@@ -11,6 +12,7 @@
 
 ## Fix Gemfile to work
     vi Gemfile
+
 ### Gemfile diff
     -gem 'rails',     :git => 'git://github.com/rails/rails.git', :branch => '3-2-stable'
     -gem 'journey',   :git => 'git://github.com/rails/journey.git'
@@ -26,6 +28,8 @@
 
     +  gem 'sass-rails',   github: 'rails/sass-rails'
     +  gem 'coffee-rails', github: 'rails/coffee-rails'
+
 ### Install rubygems
-  Edit Gemfile following
+Edit Gemfile following
+
     bundle

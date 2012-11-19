@@ -23,6 +23,8 @@ end
 gem 'jquery-rails'
 gem "less-rails",              github: 'metaskills/less-rails'
 gem "twitter-bootstrap-rails", github: 'seyhunak/twitter-bootstrap-rails'
+# gem "slim-rails",              github: 'leogalmeida/slim-rails'
+gem "slim-rails",              github: 'alindeman/slim-rails', branch: 'rails4'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

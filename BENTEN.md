@@ -33,3 +33,20 @@ Bundler version >= 1.2.2 required.
 Edit Gemfile following
 
     bundle
+
+### Install twitter-bootstrap-rails
+Uncomment and add following lines in Gemfile
+
+    gem 'therubyracer', platforms: :ruby
+    gem "less-rails",              github: 'metaskills/less-rails'
+    gem "twitter-bootstrap-rails", github: 'seyhunak/twitter-bootstrap-rails'
+
+    rails generate bootstrap:install
+    rails generate bootstrap:layout application ﬂuid
+
+### Install slim-rails
+Main repository doesn't support Rails 4, so use fork version.
+
+Add following line into Gemfile then just bundle.
+
+    gem "slim-rails", github: 'alindeman/slim-rails', branch: 'rails4'

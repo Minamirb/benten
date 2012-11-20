@@ -24,3 +24,4 @@ gem 'turbolinks'
 gem 'rb-fsevent', require: false if RUBY_PLATFORM =~ /darwin/i
 gem 'rb-inotify', require: false if RUBY_PLATFORM =~ /linux/i
 gem 'puma'
+gem 'foreman'

@@ -1,18 +1,20 @@
-<h1>Benten</h1>
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="span4">
-      <p>
-        <%= form_for(@comment) do |f| %>
-          <%= f.text_field :body %>
-        
-          <%= f.submit id: 'send_comment' %>
-        <% end %>
-	<input type="text" placeholder="Type message…">
-      </p>
+      <div id="comment_area">
+        <ul id="comments">
+        </ul>
+      </div>
     </div>
-    <div class="span8">
-      <h2>VideoArea</h2>
+    <div class="span8 offset5">
+      <%= form_for(@comment) do |f| %>
+        <%= f.text_field :body, class: "span9", placeholder: "Type message…" %>
+        <%= button_tag id:'send_comment', class: "btn btn-primary" do  %>
+          <%= t 'Send' %>
+        <% end %>
+      <% end %>
+      <div id="video_area">
+      </div>
     </div>
   </div>
 </div>

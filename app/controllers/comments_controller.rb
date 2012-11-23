@@ -17,6 +17,7 @@ class CommentsController < ApplicationController
     ensure
       stream.close
     end
+    render nothing: true
   end
 
   def index

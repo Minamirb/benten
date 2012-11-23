@@ -1,6 +1,6 @@
 return unless location.pathname == '/'
 jQuery ($) ->
-  s = new EventSource('/comments')
+  s = new EventSource('/comments/stream')
   s.addEventListener 'message', (e) ->
     ((e)->
       $('body').append($('<p>').text(e.data))

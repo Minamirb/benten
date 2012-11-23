@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   include ActionController::Live
 
-  def index
+  def stream
     response.headers['Content-Type']  = 'text/event-stream'
     response.headers['Cache-Control'] = 'no-cache'
     stream = response.stream
@@ -16,6 +16,15 @@ class CommentsController < ApplicationController
 
     ensure
       stream.close
+    end
+  end
+
+  def index
+    @comments = Comment.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @comments }
     end
   end
 

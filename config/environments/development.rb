@@ -30,4 +30,5 @@ Benten::Application.configure do
   config.assets.debug = true
 
   config.eager_load = false
+  config.cache_classes = true
 end

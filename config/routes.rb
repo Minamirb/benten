@@ -1,6 +1,8 @@
 Benten::Application.routes.draw do
   get "webrtc/echo"
-  resources :comments
+  resources :comments do
+    get :stream, on: :collection
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

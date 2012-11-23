@@ -15,6 +15,11 @@ See also http://railshackathon.net/about_en
 We don't want to make good product.
 We simply want to use modern technique and edge rails.
 
+## Usage for development
+
+    $ bundle install
+    $ bundle exec puma
+
 ## License ##
 
 MIT. See also MIT-Licence.txt

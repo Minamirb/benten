@@ -1,1 +1,1 @@
-app: puma -b unix:///tmp/benten.sock
+app: bundle exec puma -b unix:///tmp/benten.sock -e production

@@ -1,23 +1,15 @@
 class CommentsController < ApplicationController
   include ActionController::Live
+  include MonitorMixin
 
   def stream
-    response.headers['Content-Type']  = 'text/event-stream'
-    response.headers['Cache-Control'] = 'no-cache'
-    stream = response.stream
-    fsevent = FSEvent.new
-
-    begin
-      fsevent.watch(Rails.root.join('tmp', 'comment.txt').to_s, :modify, :moved_to, :create) do |e|
-        stream.write "data: #{Time.now.strftime("%F %T")}\n\n"
-      end
-      fsevent.run
-    rescue IOError
-
-    ensure
-      stream.close
+    mon_synchronize do
+      observer = CommentObserver.instance(response)
+      Comment.add_observer(observer)
+      Thread.new do
+        loop { sleep 1 }
+      end.join
     end
-    render nothing: true
   end
 
   def index

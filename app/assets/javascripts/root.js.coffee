@@ -9,10 +9,10 @@ jQuery ($) ->
 
 
   $("#send_comment").on 'click', () ->
-    $.post(@form.action + '.js', $(@form).serialize())
+    $.post(@form.action + '.json', $(@form).serialize())
       .success (response)->
          console.log "success"
-      .error () ->
-         console.log "error" # FIXME: Notice error message to user.
+      .error (response) ->
+         console.log response
 
     return false

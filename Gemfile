@@ -7,16 +7,11 @@ gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_fi
 
 gem 'sqlite3'
 
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
   gem 'sprockets-rails', github: 'sstephenson/sprockets-rails'
   gem 'sass-rails',   github: 'rails/sass-rails'
   gem 'coffee-rails', github: 'rails/coffee-rails'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', platforms: :ruby
-
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -25,21 +20,6 @@ gem "less-rails",              github: 'metaskills/less-rails'
 gem "twitter-bootstrap-rails", github: 'seyhunak/twitter-bootstrap-rails'
 # gem "slim-rails",              github: 'leogalmeida/slim-rails'
 gem "slim-rails",              github: 'alindeman/slim-rails', branch: 'rails4'
-
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano', group: :development
-
-# To use debugger
-# gem 'debugger'
+gem 'puma'
+gem 'foreman'

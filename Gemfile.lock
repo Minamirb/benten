@@ -121,7 +121,6 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    ffi (1.1.5)
     foreman (0.60.2)
       thor (>= 0.13.6)
     hike (1.2.1)
@@ -147,8 +146,6 @@ GEM
     rack-test (0.6.2)
       rack (>= 1.0)
     rake (10.0.1)
-    rb-inotify (0.8.8)
-      ffi (>= 0.5.0)
     rdoc (3.12)
       json (~> 1.4)
     sass (3.2.3)
@@ -192,7 +189,6 @@ DEPENDENCIES
   less-rails!
   puma
   rails!
-  rb-inotify
   sass-rails!
   slim-rails!
   sprockets-rails!

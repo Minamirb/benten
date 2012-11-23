@@ -1,17 +1,4 @@
 class CommentsController < ApplicationController
-  include ActionController::Live
-  include MonitorMixin
-
-  def stream
-    mon_synchronize do
-      observer = CommentObserver.instance(response)
-      Comment.add_observer(observer)
-      Thread.new do
-        loop { sleep 1 }
-      end.join
-    end
-  end
-
   def index
     @comments = Comment.all
 
